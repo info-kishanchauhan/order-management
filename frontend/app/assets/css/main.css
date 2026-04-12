@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@source "../../**/*.{vue,ts,js,mjs}";
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply min-h-screen bg-white text-slate-900;
+  }
+}
+
+/* Route progress bar: sit on bottom edge of header (Nuxt defaults to fixed top of viewport) */
+.site-header .nuxt-loading-indicator {
+  position: absolute !important;
+  inset-inline: 0 !important;
+  top: auto !important;
+  bottom: 0 !important;
+  z-index: 1 !important;
+}
