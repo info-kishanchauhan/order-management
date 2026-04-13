@@ -39,7 +39,7 @@ export const useOrdersStore = defineStore('orders', () => {
   const pagination = ref<OrdersPayload['pagination'] | null>(null)
 
   const page = ref(1)
-  const perPage = ref(20)
+  const perPage = ref(10)
   const sort = ref<
     'created_at' | 'price_cents' | 'status' | 'customer_name' | 'item_name' | 'order_code'
   >('created_at')

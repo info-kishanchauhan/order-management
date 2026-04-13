@@ -26,7 +26,7 @@ class OrderController extends Controller
         $userId = (int) $request->user()->id;
         $validated = $request->validated();
         $page = (int) ($validated['page'] ?? 1);
-        $perPage = (int) ($validated['per_page'] ?? 20);
+        $perPage = (int) ($validated['per_page'] ?? 10);
 
         $filters = [
             'sort' => $validated['sort'] ?? 'created_at',
